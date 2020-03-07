@@ -10,5 +10,7 @@ text = f.read()
 print(text)
 text.split()
 
+print(text)
+
 for line in open('data.txt', 'r'):
     print(line, end='')
