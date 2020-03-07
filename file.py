@@ -6,7 +6,7 @@ f.close()
 
 f = open('data.txt')
 text = f.read()
-text
+
 print(text)
 text.split()
 
