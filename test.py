@@ -1,5 +1,0 @@
-print("ERUNDISTIKA3")
-print("ERUNDISTIKA2")
-print("ERUNDISTIKA")
-print("ERUNDISTIKA3")
-print("ERUNDISTIKA3") #33
