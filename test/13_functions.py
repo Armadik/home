@@ -17,3 +17,4 @@ test3 = {"a": 1, "c": 3}
 test2 = list('aasdas')
 print(type(test2))
 print(solve(test2))
+#
