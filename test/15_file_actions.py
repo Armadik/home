@@ -27,8 +27,14 @@ with io.open('task_file.txt', 'r') as file:
         city = (words[4::4])
         for t, n, l in zip(tel, name, last_name):
             if t[0:2] == ' 7':
-                print(t, n, l)
-                print(email_gen(spisok_name([n], [l])))
+#                print(t, n, l)
+                mail = email_gen(spisok_name([n], [l]))
+
+with open('task_coppy.txt', 'r+') as the_file:
+    the_file.write(str(mail)+line)
+
+
+
 
 
 
