@@ -33,12 +33,18 @@ with io.open('task_file.txt', 'r') as file:
             if t[0:2] == ' 7':
                 mail = email_gen(spisok_name([n], [l]))
                 lin1 = (str(mail[0]), t, n, l, c[:-1])
-                with open('test-test', 'a') as new_file:
-                    new_file.write(str(lin1) + '\n')
+                if l == ' ':
+                    print(l+'  None')
+                    with open('test-test', 'a') as new_file:
+                        new_file.write((str(',') + str(n + ',') + str(l + ',') + str(t + ',') + str(c[:-1]) + '\n'))
+                else:
+                    print('Create:',mail)
+                    with open('test-test', 'a') as new_file:
+                        new_file.write((str(mail[0]+',') + str(n+',') + str(l+',') + str(t+',') + str(c[:-1]) + '\n'))
             else:
                 lin2 = ('no mail', t, n, l, c[:-1])
                 with open('test-test', 'a') as new_file:
-                    new_file.write(str(lin2) + '\n')
+                    new_file.write((str(',') + str(n+',') + str(l+',') + str(t+',') + str(c[:-1]) + '\n'))
 
 
 
