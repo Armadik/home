@@ -1,4 +1,6 @@
 import re
+import random
+import string
 
 def pcheck(a: str) -> str:
     res = [re.search(r"[a-z]", a), re.search(r"[A-Z]", a), re.search(r"[0-9]", a), re.search(r"\W", a)]
@@ -12,5 +14,17 @@ def pcheck(a: str) -> str:
              "then try again")
 
 password = "@12313wseAqw123"
-print(len(password))
-print(pcheck(password))
+#print(len(password))
+#print(pcheck(password))
+
+
+def randomStringwithDigitsAndSymbols(stringLength=10):
+    """Generate a random string of letters, digits and special characters """
+
+    password_characters = string.ascii_letters + string.digits + string.punctuation
+    return ''.join(random.choice(password_characters) for i in range(stringLength))
+
+test_pass = randomStringwithDigitsAndSymbols(12)
+print(test_pass)
+print(len(test_pass))
+print(pcheck(test_pass))
