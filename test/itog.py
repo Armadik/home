@@ -55,8 +55,10 @@ with io.open('task_file.txt', 'r') as file:
         city = (words[4::4])
         # Clears files
         with open('valid_users.txt', 'w') as new_file:
+            print("Create/clean valid_user.txt")
             new_file.write(str(line))
         with open('no_valid_users.txt', 'w') as new_file:
+            print("Create/clean no_valid_users.txt")
             new_file.write(str(line))
         for t, n, l, c in zip(tel, name, last_name, city):
             if t[0:2] == ' 7':
@@ -64,7 +66,6 @@ with io.open('task_file.txt', 'r') as file:
                 lin1 = (str(mail[0]), t, n, l, c[:-1])
                 # tyt podumat' ewe
                 if l == ' ':
-                    print(l+'  None')
                     with open('no_valid_users.txt', 'a') as new_file:
                         new_file.write((str(',') + str(n + ',') + str(l + ',') + str(t + ',') + str(c[:-1]) + '\n'))
                 else:
@@ -77,4 +78,12 @@ with io.open('task_file.txt', 'r') as file:
                     new_file.write((str(',') + str(n+',') + str(l+',') + str(t+',') + str(c[:-1]) + '\n'))
 
 
-
+with open('valid_users.txt', 'r') as users_file:
+    with open('valid_users_password.txt', 'w') as users_file_pass:
+        users_file_pass.write(str(line[:-1] + ', PASSWORD\n'))
+    for u in users_file.readlines():
+        if re.findall(r'@', u):
+            print('Create password for mail :', re.findall(r'\w+\.\w+\@\w+', u))
+            password_mail = randomStringwithDigitsAndSymbols(12)
+            with open('valid_users_password.txt', 'a') as users_file_pass:
+                users_file_pass.write(u[:-1] +', '+password_mail+'\n')
