@@ -1,0 +1,4 @@
+EMAIL, NAME, LAST_NAME, TEL, CITY
+Abramov.I@company.io, Ivan, Abramov, 7776514, Moscow
+Abramova.D@company.io, Dariya, Abramova, 7163908, Moscow
+Moskvina.E@company.io, Elena, Moskvina, 7584294, Moscow
