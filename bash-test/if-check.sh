@@ -3,7 +3,7 @@ result = `grep "Hello" index.html | wc -l`
 
 echo $result
 
-if ["$result" = "1"]
+if [ "$result" = "1" ]
 then
 	echo 'OK!'
     exit 0
