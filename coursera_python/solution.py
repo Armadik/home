@@ -1,6 +1,6 @@
-now = int(input())
-i = 0
+now = int(50)
+i = int(2)
 
-while i*(i + 1) < now:
-    i = i + 1
-    print(i*i)
+while i * i < now:
+    i = i + 2
+    print(i * i)
