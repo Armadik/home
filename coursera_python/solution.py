@@ -1,13 +1,8 @@
 now = int(input())
 i = int(1)
+m = 0
 
-while i <= now - 1:
-    if i == 1:
-        pass
+while i * 2 <= now:
     i = i * 2
-if i == now:
-    print('YES')
-elif now == 1:
-    print('YES')
-else:
-    print('NO')
+    m = m + 1
+print(m)
