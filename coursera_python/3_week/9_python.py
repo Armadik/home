@@ -19,7 +19,3 @@ while i != gods:
     i += 1
 print('----')
 print(cena)
-
-
-
-
