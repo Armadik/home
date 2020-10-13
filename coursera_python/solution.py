@@ -1,5 +1,5 @@
 numList = list(map(int, input().split()))
-p = 10000000000000000
+p = numList[0]
 for d in numList:
     if d > p:
         print(d, end=' ')
